@@ -1,0 +1,151 @@
+ /* Main container for contact page content */
+ .contact-container {
+    max-width: 1200px;        /* Maximum width for content */
+    margin: 0 auto;           /* Center the container */
+    padding: 2rem;            /* Spacing around content */
+}
+
+/* Grid layout for contact information and form */
+.contact-grid {
+    display: grid;                     /* Use CSS Grid */
+    grid-template-columns: 1fr 1fr;    /* Two equal columns */
+    gap: 3rem;                         /* Space between columns */
+    margin-top: 2rem;                  /* Top margin */
+}
+
+/* Styling for contact information section */
+.contact-info {
+    background: var(--palestine-white);  /* White background */
+    padding: 2rem;                      /* Internal spacing */
+    border-radius: 8px;                 /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+/* Individual contact method container (phone, email, etc.) */
+.contact-method {
+    margin-bottom: 1.5rem;    /* Space between methods */
+    display: flex;            /* Flexbox layout */
+    align-items: center;      /* Vertical centering */
+    gap: 1rem;               /* Space between icon and text */
+}
+
+/* Contact method icons */
+.contact-method i {
+    color: var(--palestine-green);  /* Theme color for icons */
+    font-size: 1.5rem;             /* Icon size */
+}
+
+/* Contact form container */
+.form-container {
+    background: var(--palestine-white);  /* White background */
+    padding: 2rem;                      /* Internal spacing */
+    border-radius: 8px;                 /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+/* Form group wrapper */
+.form-group {
+    margin-bottom: 1.5rem;  /* Space between form groups */
+}
+
+/* Form labels */
+.form-group label {
+    display: block;                   /* Block display */
+    margin-bottom: 0.5rem;           /* Space below label */
+    color: var(--palestine-black);    /* Text color */
+    font-weight: 500;                /* Semi-bold text */
+}
+
+/* Form input/textarea styling */
+.form-control {
+    width: 100%;                /* Full width */
+    padding: 0.75rem;           /* Internal padding */
+    border: 2px solid #ddd;     /* Light border */
+    border-radius: 4px;         /* Rounded corners */
+    font-size: 1rem;            /* Text size */
+    transition: border-color 0.3s;  /* Smooth border transition */
+}
+
+/* Form input/textarea focus state */
+.form-control:focus {
+    border-color: var(--palestine-green);  /* Highlight border */
+    outline: none;                         /* Remove default outline */
+}
+
+/* Error state for form inputs */
+.form-control.error {
+    border-color: var(--palestine-red);  /* Red border for errors */
+}
+
+/* Error message styling */
+.error-message {
+    color: var(--palestine-red);   /* Red text */
+    font-size: 0.875rem;          /* Smaller text */
+    margin-top: 0.25rem;          /* Space above message */
+    display: none;                /* Hidden by default */
+}
+
+/* Textarea specific styling */
+textarea.form-control {
+    min-height: 150px;     /* Minimum height */
+    resize: vertical;      /* Allow vertical resizing only */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background: var(--palestine-green);   /* Theme color background */
+    color: var(--palestine-white);        /* White text */
+    padding: 0.75rem 1.5rem;             /* Button padding */
+    border: none;                         /* No border */
+    border-radius: 4px;                  /* Rounded corners */
+    cursor: pointer;                     /* Pointer cursor */
+    font-size: 1rem;                     /* Text size */
+    transition: background-color 0.3s;    /* Color transition */
+}
+
+/* Submit button hover state */
+.submit-btn:hover {
+    background: var(--palestine-red);  /* Change color on hover */
+}
+
+/* Select dropdown styling */
+.form-select {
+    width: 100%;           /* Full width */
+    padding: 0.75rem;      /* Internal padding */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 4px;    /* Rounded corners */
+    font-size: 1rem;       /* Text size */
+    background-color: white; /* White background */
+}
+
+/* Success message styling */
+.success-message {
+    background-color: #4CAF50;  /* Green background */
+    color: white;               /* White text */
+    padding: 1rem;              /* Internal padding */
+    border-radius: 4px;         /* Rounded corners */
+    margin-bottom: 1rem;        /* Bottom margin */
+    display: none;              /* Hidden by default */
+}
+
+/* Google Maps container */
+.map-container {
+    width: 100%;
+    height: 400px;      /* Fixed height */
+    position: relative; /* For proper iframe positioning */
+}
+
+/* Google Maps iframe */
+.map-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;  /* Single column layout */
+        gap: 2rem;                   /* Reduced gap */
+    }
+}

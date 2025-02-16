@@ -1,0 +1,420 @@
+/* Color Variables - Define the main color scheme for the website */
+:root {
+    --palestine-red: #E4312b;    /* Used for highlighting and footer */
+    --palestine-green: #149954;   /* Used for header and buttons */
+    --palestine-black: #000000;   /* Used for text */
+    --palestine-white: #FFFFFF;   /* Used for backgrounds */
+    --shadow-light: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow */
+    --shadow-medium: 0 4px 6px rgba(0,0,0,0.1);  /* Medium shadow */
+}
+
+/* Reset and Base Styles - Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Base body styles - Sets the foundation for the website's typography */
+body {
+    font-family: 'Roboto', sans-serif;  /* Modern, clean font */
+    line-height: 1.6;                   /* Improved readability */
+    color: var(--palestine-black);
+    scroll-behavior: smooth;            /* Smooth scrolling for better UX */
+}
+
+.main-header {
+    background-color: var(--palestine-green);
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;  /* Aligns logo and nav items vertically */
+    justify-content: space-between; /* Spaces logo and nav */
+}
+
+.logo img {
+    width: 60px; /* Adjust size */
+    height: auto;
+    object-fit: cover;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center; /* Ensures nav items align properly */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Keeps all nav links aligned */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--palestine-black);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--palestine-white);
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://static.vecteezy.com/system/resources/previews/032/997/499/large_2x/crowd-protest-for-palestine-freedom-ai-generated-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--palestine-white);
+    margin-top: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.vision-box, .mission-box {
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--palestine-white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.vision-box {
+    border-left: 4px solid var(--palestine-red);
+}
+
+.mission-box {
+    border-left: 4px solid var(--palestine-green);
+}
+
+/* Updates Section */
+.updates {
+    padding: 3rem 2rem;
+    background-color: var(--palestine-white);
+}
+
+.updates h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--palestine-black);
+}
+
+.news1-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-item {
+    background-color: var(--palestine-white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-left: 3px solid var(--palestine-green);
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item h3 {
+    color: var(--palestine-black);
+    margin-bottom: 0.5rem;
+}
+
+.news-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.news-item .date {
+    color: var(--palestine-green);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-content {
+    background-color: var(--palestine-white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--palestine-green);
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: var(--palestine-red);
+    color: var(--palestine-white);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--palestine-white);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 3px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+    .vision-mission {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .news1-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets and large mobile devices */
+@media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--palestine-black);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--palestine-white);
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .news1-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .vision-mission {
+        padding: 1rem;
+    }
+
+    .news-item {
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .featured-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Statistics Grid Styles */
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--palestine-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--palestine-green);
+    margin: 1rem 0;
+}
+
+/* Call to Action Section Styles */
+.cta-section {
+    background-color: var(--palestine-green);
+    color: var(--palestine-white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: var(--palestine-white);
+    color: var(--palestine-green);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design for New Sections */
+@media screen and (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .intro-container h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Style for the news grid container */
+.news-grid {
+    /* Create a 2x2 grid layout */
+    display: grid;
+    /* Create two equal columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* Add gap between grid items */
+    gap: 20px;
+    /* Add padding around the grid */
+    padding: 20px;
+}
+
+/* Style for individual news items */
+.news-item {
+    /* Add background color */
+    background-color: #f5f5f5;
+    /* Add padding inside each news item */
+    padding: 20px;
+    /* Round the corners */
+    border-radius: 8px;
+    /* Add a subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for news item title */
+.news-item h3 {
+    /* Add margin below the title */
+    margin-bottom: 10px;
+    /* Set text color */
+    color: #333;
+}
+
+/* Style for news date */
+.news-date {
+    /* Make the date text smaller */
+    font-size: 0.9em;
+    /* Set a lighter color for the date */
+    color: #666;
+    /* Add margin below the date */
+    margin-bottom: 8px;
+}
+
+/* Style for news excerpt */
+.news-excerpt {
+    /* Set text color */
+    color: #444;
+    /* Add line height for better readability */
+    line-height: 1.4;
+}
+
+/* Make the grid responsive for mobile devices */
+@media (max-width: 768px) {
+    .news-grid {
+        /* Change to single column on mobile */
+        grid-template-columns: 1fr;
+    }
+}

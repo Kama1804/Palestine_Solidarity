@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Palestine Solidarity Movement</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="image/logo.jpg" alt="Palestine Solidarity Logo">
+        </div>
+        <nav class="main-nav">
+            <button class="mobile-menu-btn" id="menuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+        <h1>Latest News & Updates</h1>
+        <p class="campaign-description">If you have been looking for a source for the latest news and headlines regarding Palestinian and related issues, look no further.</p>
+      </div>
+      </section>
+
+    <!-- Main Content -->
+    <main class="news-container">
+        <h2>Search and Explore</h2>
+        <input type="text" class="search-bar" id="searchBar" placeholder="Search news...">
+        
+        <div class="news-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="article">Articles</button>
+            <button class="filter-btn" data-filter="blog">Blog</button>
+            <button class="filter-btn" data-filter="press">Press Releases</button>
+        </div>
+
+        <!-- Featured Article -->
+        <article class="featured-article">
+            <img src="image/news2.png" alt="Featured Article" class="news-image">
+            <div class="featured-content">
+                <span class="news-type type-article">Featured Article</span>
+                <h2 class="news-title">Cultural & Social Initiatives – Building Long-Term Bridges</h2>
+                <p class="news-date">February 12, 2025</p>
+                <p class="news-excerpt">Highlight cultural exchange programs and community-building efforts inspired by Queer Theory’s principles..</p>
+                <a href="https://syndu.com/blog/cultural-social-initiatives-building-long-term-bridges/" class="read-more">Read Full Article</a>
+            </div>
+        </article>
+
+        <!-- News Grid -->
+        <div class="news-grid">
+            <!-- Articles -->
+            <article class="news-card visible" data-type="article">
+                <img src="image/article1.png" alt="Article Image" class="news-image">
+                <div class="news-content">
+                    <span class="news-type type-article">Article</span>
+                    <h3 class="news-title">Palestinian Realism</h3>
+                    <p class="news-date">May 27, 2021</p>
+                    <p class="news-excerpt">The Palestinian people are the Indigenous people of the country and rightful owners of the land – in the actual, not just historical and metaphorical sense...</p>
+                    <a href="https://thisweekinpalestine.com/palestinian-realism/" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <!-- Events -->
+            <article class="news-card visible" data-type="blog">
+                <img src="image/blog.jpg" alt="Blog Image" class="news-image">
+                <div class="news-content">
+                    <span class="news-type type-blog">Blog</span>
+                    <h3 class="news-title">Guide to BDS Boycott & Pressure Corporate Priority Targeting</h3>
+                    <p class="news-date">December 6, 2024</p>
+                    <p class="news-excerpt">Boycott these companies now for their complicity in Israel' occupation, apartheid and genocide againt Palestians...</p>
+                    <a href="https://bdsmovement.net/Guide-to-BDS-Boycott" class="read-more">Learn More</a>
+                </div>
+            </article>
+
+            <!-- Press Releases -->
+            <article class="news-card visible" data-type="press">
+                <img src="image/press1.png" alt="Press Release Image" class="news-image">
+                <div class="news-content">
+                    <span class="news-type type-press">Press Release</span>
+                    <h3 class="news-title">New research reveals Local Government Pension Scheme (LGPS) funds invest over £12billion in companies enabling Israel’s crimes</h3>
+                    <p class="news-date">February 6, 2025</p>
+                    <p class="news-excerpt">Palestine Solidarity Campaign (PSC) has released updated research revealing that LGPS funds, administered by local councils across Britain, invest over £12billion in companies enabling Israel’s genocide, military occupation and apartheid against Palestinians...</p>
+                    <a href="https://palestinecampaign.org/press-release-new-research-reveals-local-government-pension-scheme-lgps-funds-invest-over-12billion-in-companies-enabling-israels-crimes/" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="news-card visible" data-type="article">
+                <img src="image/article2.png" alt="Article Image" class="news-image">
+                <div class="news-content">
+                    <span class="news-type type-article">Article</span>
+                    <h3 class="news-title">PSC Statement on Ceasefire Agreement</h3>
+                    <p class="news-date">January 16, 2025</p>
+                    <p class="news-excerpt">PSC shares the immense relief expressed by Palestinians at the ceasefire agreement that promises to stop the immediate catastrophic loss of life caused by Israel’s genocide in the Gaza Strip. The violence must end now. On Wednesday – the very day that the ceasefire was announced – Israel killed more than 80 Palestinians, 30 of …</p>
+                    <a href="https://palestinecampaign.org/psc-statement-on-ceasefire-agreement/" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest news and updates.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@palestinesolidarity.org</p>
+                <p>Phone: +601234567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/palestinesolidarityuk/" class="social-link">Facebook</a>
+                    <a href="https://x.com/PSCupdates?mx=2" class="social-link">X</a>
+                    <a href="https://www.instagram.com/palestinesolidarityuk/" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Palestine Solidarity Movement. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/news.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+  /* Define custom color variables for consistent Palestinian flag colors throughout the site */
+  :root {
+    --palestine-red: #E4312b;
+    --palestine-green: #149954;
+    --palestine-black: #000000;
+    --palestine-white: #FFFFFF;
+  }
+
+  /* Media Grid Layout
+  * Creates a responsive grid system for media items
+  * Auto-fills columns based on viewport width
+  * Minimum column width of 300px
+  */
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  /* Media Item Card Styling
+  * Adds shadow and hover effects
+  * Uses white background for contrast
+  * Smooth transition for hover animation
+  */
+  .media-item {
+    background: var(--palestine-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover effect for media items */
+  .media-item:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Media Image Styling
+  * Sets consistent dimensions for media thumbnails
+  * Uses object-fit for proper image scaling
+  */
+  .media-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Special styling for photo type media items */
+  .media-image[data-alt="photo"] {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Content area styling for media items */
+  .media-content {
+    padding: 1rem;
+  }
+
+  /* Title styling for media items */
+  .media-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--palestine-black);
+  }
+
+  /* Description text styling */
+  .media-description {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    color: #333;
+  }
+
+  /* Filter Button Container
+  * Flexible layout for filter buttons
+  * Allows wrapping on smaller screens
+  */
+  .media-filters {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  /* Filter Button Styling
+  * Uses Palestinian green with white text
+  * Includes hover state with red color
+  */
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    background: var(--palestine-green);
+    color: var(--palestine-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  /* Hover and active states for filter buttons */
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--palestine-red);
+  }
+
+  /* Section Styling */
+  .gallery-section {
+    margin-bottom: 4rem;
+  }
+
+  /* Section Header Styling
+  * Flexbox layout for title and "view all" link
+  * Uses Palestinian green border
+  */
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--palestine-green);
+    padding-bottom: 0.5rem;
+  }
+
+  /* Section title styling */
+  .section-title {
+    color: var(--palestine-green);
+    margin: 0;
+  }
+
+  /* "View all" link styling */
+  .view-all {
+    color: var(--palestine-red);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Infographic container styling */
+  .infographic {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Audio player styling */
+  .audio-player {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Campaign Banner Styling
+  * Uses background image with overlay
+  * Centers content and adds padding
+  */
+  .campaign-banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('banner-image.jpg');
+    background-size: cover;
+    color: white;
+    padding: 4rem 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  /* Campaign title styling */
+  .campaign-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Campaign description styling */
+  .campaign-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+/* Style for the view full screen button */
+.view-full-btn {
+  /* Set the background color to a green shade for visual appeal */
+  background-color: #4CAF50;
+  /* Set text color to white for good contrast against the green background */
+  color: white;
+  /* Remove the default button border for a cleaner look */
+  border: none;
+  /* Add padding: 10px top/bottom, 20px left/right to make button more clickable */
+  padding: 10px 20px;
+  /* Add rounded corners to the button for a modern look */
+  border-radius: 5px;
+  /* Change cursor to pointer to indicate button is clickable */
+  cursor: pointer;
+  /* Add space above the button to separate it from other content */
+  margin-top: 10px;
+  /* Add smooth transition effect when background color changes on hover */
+  transition: background-color 0.3s;
+}
+
+/* Style for button when user hovers over it */
+.view-full-btn:hover {
+  /* Darken the background color slightly when hovering for interactive feedback */
+  background-color: #45a049;
+}
+
+/* Modal container that covers the entire screen */
+.modal {
+  /* Hidden by default until triggered */
+  display: none;
+  /* Fix the position to cover the entire viewport */
+  position: fixed;
+  /* Position from the top edge of viewport */
+  top: 0;
+  /* Position from the left edge of viewport */
+  left: 0;
+  /* Make modal cover full width of viewport */
+  width: 100%;
+  /* Make modal cover full height of viewport */
+  height: 100%;
+  /* Semi-transparent black background for overlay effect */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Ensure modal appears above all other content */
+  z-index: 1000;
+}
+
+/* Container for the modal's main content */
+.modal-content {
+  /* Position relative to allow absolute positioning of child elements */
+  position: relative;
+  /* Limit width to 90% of viewport to prevent overflow */
+  max-width: 90%;
+  /* Limit height to 90% of viewport to prevent overflow */
+  max-height: 90%;
+  /* Center the content horizontally */
+  margin: auto;
+  /* Add space around the content */
+  padding: 20px;
+  /* Position from top of modal */
+  top: 50%;
+  /* Center the content vertically using transform */
+  transform: translateY(-50%);
+}
+
+/* Style for media elements (images, videos) inside modal */
+.modal-media {
+  /* Make media fill width of container */
+  width: 100%;
+  /* Allow height to adjust automatically maintaining aspect ratio */
+  height: auto;
+  /* Limit height to 80% of viewport height */
+  max-height: 80vh;
+  /* Ensure media fits within container while maintaining aspect ratio */
+  object-fit: contain;
+}
+
+/* Style for description text below media in modal */
+.modal-description {
+  /* Set text color to white for visibility on dark background */
+  color: white;
+  /* Add space above the description */
+  margin-top: 20px;
+  /* Add space around the text */
+  padding: 20px;
+  /* Semi-transparent black background for better text readability */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Add rounded corners to description container */
+  border-radius: 5px;
+}
+
+/* Style for the close button in modal */
+.close-modal {
+  /* Position absolutely within modal-content */
+  position: absolute;
+  /* Distance from top of modal-content */
+  top: 15px;
+  /* Distance from right of modal-content */
+  right: 15px;
+  /* Set text color to white */
+  color: white;
+  /* Increase font size for better visibility */
+  font-size: 30px;
+  /* Change cursor to pointer to indicate clickable */
+  cursor: pointer;
+  /* Remove default button background */
+  background: none;
+  /* Remove default button border */
+  border: none;
+  /* Remove default button padding */
+  padding: 0;
+}
+
+/* Style for close button when hovered */
+.close-modal:hover {
+  /* Change color to light grey when hovering for interactive feedback */
+  color: #ccc;
+}
+
+/* Style for YouTube iframe in modal */
+.modal-content iframe.modal-media {
+  /* Make iframe fill width of container */
+  width: 100%;
+  /* Make iframe fill height of container */
+  height: 100%;
+  /* Remove default iframe border */
+  border: none;
+}
+
+/* Container for media content in modal */
+.modal-media-container {
+  /* Use flexbox for centering content */
+  display: flex;
+  /* Center content horizontally */
+  justify-content: center;
+  /* Center content vertically */
+  align-items: center;
+  /* Make container fill width of parent */
+  width: 100%;
+  /* Make container fill height of parent */
+  height: 100%;
+} 
+  /* Responsive Design
+  * Adjusts grid and spacing for mobile devices
+  * Centers filter buttons
+  * Reduces campaign title size
+  */
+  @media screen and (max-width: 768px) {
+    .media-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .media-filters {
+      justify-content: center;
+    }
+
+    .campaign-title {
+      font-size: 2rem;
+    }
+  }

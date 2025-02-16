@@ -1,0 +1,146 @@
+       /* CSS Custom Properties (variables) for consistent color scheme */
+       :root {
+        --palestine-red: #E4312b;    /* Palestinian flag red */
+        --palestine-green: #149954;   /* Palestinian flag green */
+        --palestine-black: #000000;   /* Palestinian flag black */
+        --palestine-white: #FFFFFF;   /* Palestinian flag white */
+    }
+
+    /* Main container for resources section */
+    .resources-container {
+        max-width: 1200px;           /* Limit width for readability */
+        margin: 0 auto;              /* Center container */
+        padding: 2rem;               /* Add spacing around content */
+    }
+
+    /* Controls section containing search and filters */
+    .controls {
+        display: flex;               /* Use flexbox for layout */
+        gap: 20px;                  /* Space between elements */
+        margin-bottom: 20px;        /* Bottom margin for separation */
+        flex-wrap: wrap;            /* Allow wrapping on smaller screens */
+    }
+
+    /* Search bar styling */
+    .search-bar {
+        width: 100%;                /* Full width */
+        max-width: 600px;           /* Maximum width for usability */
+        margin-bottom: 2rem;        /* Space below search bar */
+        padding: 0.75rem;           /* Internal padding */
+        border: 2px solid var(--palestine-green);  /* Themed border */
+        border-radius: 4px;         /* Rounded corners */
+        font-size: 1rem;            /* Readable font size */
+    }
+
+    /* Resource filter buttons container */
+    .resource-filters {
+        display: flex;              /* Flexbox layout */
+        gap: 1rem;                  /* Space between filters */
+        margin-bottom: 2rem;        /* Bottom margin */
+        flex-wrap: wrap;            /* Wrap on smaller screens */
+    }
+
+    /* Individual filter button styling */
+    .filter-btn {
+        padding: 0.5rem 1rem;       /* Button padding */
+        background: var(--palestine-green);  /* Default background */
+        color: var(--palestine-white);       /* Text color */
+        border: none;               /* Remove border */
+        border-radius: 4px;         /* Rounded corners */
+        cursor: pointer;            /* Pointer cursor on hover */
+        transition: background-color 0.3s;  /* Smooth color transition */
+    }
+
+    /* Filter button hover effect */
+    .filter-btn:hover {
+        background: var(--palestine-red);  /* Change color on hover */
+    }
+
+    /* Active filter button state */
+    .filter-btn.active {
+        background: var(--palestine-red);  /* Highlight active filter */
+    }
+
+    /* Resources table styling */
+    .resources-table {
+        width: 100%;               /* Full width table */
+        border-collapse: collapse; /* Collapse borders */
+        margin-top: 20px;         /* Top spacing */
+        background: var(--palestine-white);  /* White background */
+        border-radius: 8px;       /* Rounded corners */
+        overflow: hidden;         /* Contain rounded corners */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow */
+    }
+
+    /* Table header styling */
+    .resources-table th {
+        background-color: var(--palestine-green);  /* Themed header */
+        color: var(--palestine-white);            /* White text */
+        padding: 12px;            /* Cell padding */
+        text-align: left;         /* Left align text */
+        font-weight: 600;         /* Semi-bold text */
+    }
+
+    /* Table cell styling */
+    .resources-table td {
+        padding: 12px;            /* Cell padding */
+        border-bottom: 1px solid #dee2e6;  /* Bottom border */
+    }
+
+    /* Table row hover effect */
+    .resources-table tr:hover {
+        background-color: #f8f9fa;  /* Light gray background on hover */
+    }
+
+    /* Badge styling for resource types */
+    .badge {
+        padding: 4px 8px;          /* Badge padding */
+        border-radius: 12px;       /* Rounded corners */
+        font-size: 12px;           /* Smaller font size */
+        font-weight: 600;          /* Semi-bold text */
+        color: var(--palestine-white);  /* White text */
+    }
+
+    /* PDF badge specific styling */
+    .badge-pdf {
+        background-color: var(--palestine-red);  /* Red background */
+    }
+
+    /* Word document badge specific styling */
+    .badge-word {
+        background-color: #2196F3;  /* Blue background */
+    }
+
+    /* Download button styling */
+    .download-btn {
+        padding: 6px 12px;         /* Button padding */
+        background-color: var(--palestine-green);  /* Themed background */
+        color: var(--palestine-white);            /* White text */
+        border: none;              /* No border */
+        border-radius: 4px;        /* Rounded corners */
+        cursor: pointer;           /* Pointer cursor */
+        transition: background-color 0.3s;  /* Smooth color transition */
+    }
+
+    /* Download button hover effect */
+    .download-btn:hover {
+        background-color: var(--palestine-red);  /* Change color on hover */
+    }
+
+    /* Responsive design adjustments */
+    @media screen and (max-width: 768px) {
+        /* Hide author and date columns on mobile */
+        .author-col, .date-col {
+            display: none;
+        }
+        
+        /* Center filter buttons */
+        .resource-filters {
+            justify-content: center;
+        }
+
+        /* Full width search bar */
+        .search-bar {
+            max-width: 100%;
+        }
+    }

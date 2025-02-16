@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Center - Palestine Solidarity Movement</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="logo">
+        <img src="image/logo.jpg" alt="Palestine Solidarity Logo">
+    </div>
+    <nav class="main-nav">
+        <button class="mobile-menu-btn" id="menuBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+  <section class="hero">
+      <div class="hero-content">
+      <h1 class="campaign-title">Media Center</h1>
+      <p class="campaign-description">Explore our collection of photos, videos, infographics, and audio content documenting Palestinian life, culture, and advocacy work.</p>
+    </div>
+    </section>
+    <main class="main-content">
+    <!-- Filter Buttons -->
+    <div class="media-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="photo">Photos</button>
+      <button class="filter-btn" data-filter="video">Videos</button>
+      <button class="filter-btn" data-filter="infographic">Infographics</button>
+      <button class="filter-btn" data-filter="audio">Audio</button>
+    </div>
+
+    <!-- Featured Campaign -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Campaign</h2>
+      </div>
+      <div class="media-grid">
+        <article class="media-item" data-type="photo">
+          <img src="image/media1.png" alt="Students in classroom" class="media-image" />
+          <div class="media-content">
+            <h3 class="media-title">Child Detention</h3>
+            <p class="media-description">This data visualization project compiles data from multiple regions in Palestine and spans 20 years.</p>
+            <p class="media-description">The results are sobering and demonstrate the hard evidence of the abuse of Palestinian youth by the Israeli government and Israeli Defense Forces (IDF).</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="infographic">
+          <div class="media-image infographic">
+            <img src="image/media2.png" alt="Honoring the First Responders of Gaza" class="media-image" />
+          </div>
+          <div class="media-content">
+            <h3 class="media-title">Honoring the First Responders of Gaza</h3>
+            <p class="media-description">During the June 1st demonstration of the “Great March of Return” (the ongoing 2018 Gaza border protests of Palestinians demonstrating for their human rights), </p>
+            <p class="media-description">1 Palestinian nurse/medic Razan al-Najjar, 21, joined other medics braving Israeli sniper fire to rescue and treat unarmed protesters when she was deliberately targeted and fatally shot in the chest by an Israeli soldier.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="audio">
+          <img src="image/media3.png" alt="Student Stories" class="media-image" />
+          <div class="media-content">
+            <h3 class="media-title">Student Voices</h3>
+            <p class="media-description">Our Report, The Palestine Exception to Free Speech: A Movement Under Attack in the US documents for the first time the widespread and growing suppression of Palestinian human rights advocacy in the United States.</p>
+            <audio controls class="audio-player">
+              <source src="audio/audio1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <h2 class="section-title">Photo Gallery</h2>
+      </div>
+      <div class="media-grid">
+        <article class="media-item" data-type="photo">
+          <img src="image/media4.jpg" alt="Through-The-Eyes-of-A-Child" class="media-image" data-alt="photo" />
+          <div class="media-content">
+            <h3 class="media-title">Through The Eyes of A Child</h3>
+            <p class="media-description">Two Palestinian children, ages 3 and 4, waiting at checkpoint near Bethlehem, in the Israeli occupied West Bank. There are over 500 checkpoints in the West Bank, most constructed on Palestinian land.</p>
+            <p class="media-description">These checkpoints deprive Palestinians of their basic right to freedom of movement, forcing many to wait in line for multiple hours while traveling to and from work and to and from friends and family members.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="photo">
+          <img src="image/media5.jpg" alt="Palestinian-Child-Refugee" class="media-image" data-alt="photo" />
+          <div class="media-content">
+            <h3 class="media-title">Palestinian Child Refugee</h3>
+            <p class="media-description">A 6 year old Palestinian child who is growing up in the Aida Refugee Camp near Bethlehem, in the Israeli occupied West Bank. In 2003, Israel began construction of a 26-foot concrete security barrier, which now runs directly through the camp.</p>
+            <p class="media-description">Because of this barrier, this child has no safe place to play. Most children living in the Aida Refugee Camp suffer from trauma as the result of nightly raids carried out by israeli forces.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="photo">
+          <img src="image/media6.jpg" alt="Young-Girl-Destroyed-Bedroom" class="media-image" data-alt="photo" />
+          <div class="media-content">
+            <h3 class="media-title">Young Girl, Destroyed Bedroom</h3>
+            <p class="media-description">Samah Afanah is 12 years old and lives in Shujayea, in the Gaza Strip. This is photo was taken of her in her bedroom just after hour house was bombed by israeli forces during the military operation “Protective Edge,” a 90-day long military operation in the summer 2014 through which Israeli military killed 2,256 Palestinians, including over 500 children.</p>
+            <p class="media-description">A recent report by the United Nations concluded that the Gaza Strip could be uninhabitable by 2020 due to the destruction of vital water, sewage, and electric infrastructure that has resulted from Israeli military actions and from Israel’s ongoing blockade of Gaza.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <h2 class="section-title">Featured Videos</h2>
+      </div>
+      <div class="media-grid">
+        <article class="media-item" data-type="video">
+          <iframe class="media-image" src="https://www.youtube.com/embed/H7FML0wzJ6A?si=J_2DrSAKMZPS8HtS/placeholder1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="media-content">
+            <h3 class="media-title">Documentary: Lives & Stories</h3>          
+            <p class="media-description">Palestine 1920: The Other Side of the Palestinian Story | Al Jazeera World Documentary</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="video">
+          <video class="media-image" width="320" height="240" controls>
+            <source src="video/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+          <div class="media-content">
+            <h3 class="media-title">Arts & Culture Series</h3>
+            <p class="media-description">Stop violating human rights of Palestine.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Infographics -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <h2 class="section-title">Infographics & Data</h2>
+      </div>
+      <div class="media-grid">
+        <article class="media-item" data-type="infographic">
+          <div class="media-image infographic">
+            <img src="image/info1.jpg" alt="Historical-Timeline" class="media-image"/>
+          </div>
+          <div class="media-content">
+            <h3 class="media-title">Historical Timeline</h3>
+            <p class="media-description">This visual maps the Zionist and Jewish-Israeli localities founded across historic Palestine from 1878 until today.</p>
+            <p class="media-description">It shows that this colonization has been a continuous process that accelerated with the establishment of Israel, and with the occupation of the West Bank, Gaza and Syrian Golan Heights.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="infographic">
+          <div class="media-image infographic">
+            <img src="image/info2.jpg" alt="Structural-Inequality" class="media-image" />
+          </div>
+          <div class="media-content">
+            <h3 class="media-title">Structural Inequality</h3>
+            <p class="media-description">This visual highlights the asymmetry of power in Palestine/Israel by showing the disparity in the number of Palestinians killed versus Israelis killed, and how this disparity is growing over time.</p>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Audio Content -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <h2 class="section-title">Audio Podcast</h2>
+      </div>
+      <div class="media-grid">
+        <article class="media-item" data-type="audio">
+          <img src="image/podcast1.jpg" alt="A Most-Welcome-Ceasefire:-Israel,-Hamas,-and-Gaza's-future" class="media-image" />
+          <div class="media-content">
+            <h3 class="media-title">A Most Welcome Ceasefire: Israel, Hamas, and Gaza's future</h3>
+            <audio controls class="audio-player">
+              <source src="audio/audio2.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+
+        <article class="media-item" data-type="audio">
+          <img src="image/podcast2.jpg" alt="Make-the-Middle-East-Unpredictable-Again" class="media-image" />
+          <div class="media-content">
+            <h3 class="media-title">Make the Middle East Unpredictable Again</h3>
+            <audio controls class="audio-player">
+              <source src="audio/audio3.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <button class="view-full-btn">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@palestinesolidarity.org</p>
+        <p>Phone: +601234567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/palestinesolidarityuk/" class="social-link">Facebook</a>
+          <a href="https://x.com/PSCupdates?mx=2" class="social-link">X</a>
+          <a href="https://www.instagram.com/palestinesolidarityuk/" class="social-link">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Palestine Solidarity Movement. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/media.js"></script>
+</body>
+</html>
