@@ -200,106 +200,113 @@
   background-color: #45a049;
 }
 
-/* Modal container that covers the entire screen */
+/* Modal Base Container */
 .modal {
-  /* Hidden by default until triggered */
+  /* Hide modal by default */
   display: none;
-  /* Fix the position to cover the entire viewport */
+  /* Fix position to viewport */
   position: fixed;
-  /* Position from the top edge of viewport */
+  /* Position from edges */
   top: 0;
-  /* Position from the left edge of viewport */
   left: 0;
-  /* Make modal cover full width of viewport */
+  /* Cover full viewport */
   width: 100%;
-  /* Make modal cover full height of viewport */
   height: 100%;
-  /* Semi-transparent black background for overlay effect */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Ensure modal appears above all other content */
+  /* Semi-transparent white background */
+  background-color: var(--palestine-white);
+  /* Ensure modal appears above other content */
   z-index: 1000;
 }
 
-/* Container for the modal's main content */
+/* Modal Content Container */
 .modal-content {
-  /* Position relative to allow absolute positioning of child elements */
+  /* Enable absolute positioning of close button */
   position: relative;
-  /* Limit width to 90% of viewport to prevent overflow */
+  /* Limit width to 90% of viewport */
   max-width: 90%;
-  /* Limit height to 90% of viewport to prevent overflow */
-  max-height: 90%;
-  /* Center the content horizontally */
+  /* Limit height to 90% of viewport */
+  height: 90vh;
+  /* Center horizontally */
   margin: auto;
-  /* Add space around the content */
+  /* Add space around content */
   padding: 20px;
-  /* Position from top of modal */
+  /* Center vertically */
   top: 50%;
-  /* Center the content vertically using transform */
   transform: translateY(-50%);
+  /* Use flexbox for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for media elements (images, videos) inside modal */
+/* Media Element Styling */
 .modal-media {
-  /* Make media fill width of container */
+  /* Fill container width */
   width: 100%;
-  /* Allow height to adjust automatically maintaining aspect ratio */
+  /* Allow height to adjust with aspect ratio */
   height: auto;
-  /* Limit height to 80% of viewport height */
-  max-height: 80vh;
-  /* Ensure media fits within container while maintaining aspect ratio */
+  /* Maximum height of 90% viewport height */
+  max-height: 90vh;
+  /* Maintain aspect ratio while fitting in container */
   object-fit: contain;
 }
 
-/* Style for description text below media in modal */
-.modal-description {
-  /* Set text color to white for visibility on dark background */
-  color: white;
-  /* Add space above the description */
-  margin-top: 20px;
-  /* Add space around the text */
-  padding: 20px;
-  /* Semi-transparent black background for better text readability */
-  background-color: rgba(0, 0, 0, 0.7);
-  /* Add rounded corners to description container */
-  border-radius: 5px;
-}
-
-/* Style for the close button in modal */
-.close-modal {
-  /* Position absolutely within modal-content */
-  position: absolute;
-  /* Distance from top of modal-content */
-  top: 15px;
-  /* Distance from right of modal-content */
-  right: 15px;
-  /* Set text color to white */
-  color: white;
-  /* Increase font size for better visibility */
-  font-size: 30px;
-  /* Change cursor to pointer to indicate clickable */
-  cursor: pointer;
-  /* Remove default button background */
-  background: none;
-  /* Remove default button border */
-  border: none;
-  /* Remove default button padding */
-  padding: 0;
-}
-
-/* Style for close button when hovered */
-.close-modal:hover {
-  /* Change color to light grey when hovering for interactive feedback */
-  color: #ccc;
-}
-
-/* Style for YouTube iframe in modal */
-.modal-content iframe.modal-media {
-  /* Make iframe fill width of container */
+/* Media Container */
+.modal-media-container {
+  /* Use flexbox for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Fill available space */
   width: 100%;
-  /* Make iframe fill height of container */
+  height: 100%;
+  /* White background */
+  background-color: #ffffff;
+  /* Add subtle padding */
+  padding: 20px;
+  /* Add rounded corners */
+  border-radius: 8px;
+}
+
+/* Close Button */
+.close-modal {
+  /* Position in top-right corner */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  /* Dark gray color for visibility on white */
+  color: #333;
+  /* Large size for visibility */
+  font-size: 30px;
+  /* Pointer cursor for better UX */
+  cursor: pointer;
+  /* Remove default button styling */
+  background: none;
+  border: none;
+  padding: 0;
+  /* Ensure button appears above media */
+  z-index: 1001;
+}
+
+/* Close Button Hover State */
+.close-modal:hover {
+  /* Darker color on hover for feedback */
+  color: #000;
+}
+
+/* iframe Specific Styling */
+.modal-content iframe.modal-media {
+  /* Fill container */
+  width: 100%;
   height: 100%;
   /* Remove default iframe border */
   border: none;
+  /* Add subtle border for iframe */
+  border: 1px solid #eee;
+  /* Add rounded corners */
+  border-radius: 4px;
 }
 
 /* Container for media content in modal */

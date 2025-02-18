@@ -10,30 +10,43 @@
 
 /* Reset and Base Styles - Ensures consistent styling across browsers */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Base body styles - Sets the foundation for the website's typography */
 body {
-    font-family: 'Roboto', sans-serif;  /* Modern, clean font */
-    line-height: 1.6;                   /* Improved readability */
-    color: var(--palestine-black);
-    scroll-behavior: smooth;            /* Smooth scrolling for better UX */
+    font-family: 'Roboto', sans-serif;  /* Modern, clean font for the body text */
+    line-height: 1.6;                   /* Improved readability by increasing line height */
+    color: var(--palestine-black);      /* Set text color to black */
+    scroll-behavior: smooth;            /* Enable smooth scrolling for better user experience */
 }
 
 .main-header {
-    background-color: var(--palestine-green);
-    padding: 0.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
+    background-color: var(--palestine-green); /* Set header background color */
+    padding: 0.5rem; /* Add padding around the header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow for depth */
+    position: fixed; /* Fix the header at the top of the page */
+    width: 100%; /* Make header full width */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure header is above other content */
+    display: flex; /* Use flexbox for layout */
     align-items: center;  /* Aligns logo and nav items vertically */
-    justify-content: space-between; /* Spaces logo and nav */
+    justify-content: space-between; /* Spaces logo and nav items evenly */
+    /* Add transition for smooth hiding/showing */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add these new styles for header scroll behavior */
+.main-header.scroll-down {
+    /* Move the header up (hide it) */
+    transform: translateY(-100%);
+}
+
+.main-header.scroll-up {
+    /* Move the header back to its original position (show it) */
+    transform: translateY(0);
 }
 
 .logo img {
@@ -61,20 +74,49 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--palestine-black);
+    color: var(--palestine-white);
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a.active {
+    background-color: var(--palestine-white);
+    color: var(--palestine-green);
+}
+
+.nav-links a:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.2);
     color: var(--palestine-white);
 }
 
 .mobile-menu-btn {
-    display: none;
+    /* Reset default button styles */
+    display: none;  /* Hidden by default, shown only on mobile */
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    
+    /* Style the button */
+    color: var(--palestine-white);
+    font-size: 24px;  /* Make the hamburger icon larger */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Hero Section */
+/* Add hover effect */
+.mobile-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);  /* Subtle highlight on hover */
+}
+
+/* Active state when menu is open */
+.mobile-menu-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);  /* Slightly darker background when active */
+}
+
+/* Hero Section - Main visual area of the website */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://static.vecteezy.com/system/resources/previews/032/997/499/large_2x/crowd-protest-for-palestine-freedom-ai-generated-free-photo.jpg');
     background-size: cover;
@@ -93,10 +135,9 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Vision & Mission Section */
+/* Vision & Mission Section - Displays vision and mission statements */
 .vision-mission {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 4rem 2rem;
     background-color: #f5f5f5;
@@ -117,7 +158,7 @@ body {
     border-left: 4px solid var(--palestine-green);
 }
 
-/* Updates Section */
+/* Updates Section - Displays news or updates */
 .updates {
     padding: 3rem 2rem;
     background-color: var(--palestine-white);
@@ -166,7 +207,7 @@ body {
     margin-top: 1rem;
 }
 
-/* Main Content Styles */
+/* Main Content Styles - Styles for the main content area */
 .main-content {
     padding: 2rem;
     max-width: 1200px;
@@ -181,7 +222,7 @@ body {
     border-left: 4px solid var(--palestine-green);
 }
 
-/* Footer Styles */
+/* Footer Styles - Styles for the footer section */
 .main-footer {
     background-color: var(--palestine-red);
     color: var(--palestine-white);
@@ -214,7 +255,7 @@ body {
     border-top: 3px solid rgba(255,255,255,0.1);
 }
 
-/* Responsive Design */
+/* Responsive Design - Adjust styles for different screen sizes */
 /* Large tablets and small desktops */
 @media screen and (max-width: 1024px) {
     .vision-mission {
@@ -231,12 +272,7 @@ body {
 /* Tablets and large mobile devices */
 @media screen and (max-width: 768px) {
     .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--palestine-black);
-        font-size: 1.5rem;
-        cursor: pointer;
+        display: block;  /* Show the button on mobile */
     }
 
     .nav-links {
@@ -245,9 +281,10 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--palestine-white);
+        background-color: var(--palestine-green);  /* Match header color */
         flex-direction: column;
         padding: 1rem;
+        box-shadow: var(--shadow-medium);  /* Add shadow for depth */
     }
 
     .nav-links.active {
@@ -255,7 +292,30 @@ body {
     }
 
     .nav-links li {
-        margin: 0.5rem 0;
+        margin: 0.8rem 0;  /* Add more spacing between menu items */
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        color: var(--palestine-white);  /* Make text white for better contrast */
+        display: block;
+        padding: 0.5rem;
+        font-size: 1.1rem;  /* Slightly larger text */
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);  /* Subtle highlight on hover */
+        border-radius: 4px;
+    }
+
+    .nav-links a.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--palestine-white);
+    }
+    
+    .nav-links a:not(.active):hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .hero-content h1 {
@@ -290,12 +350,13 @@ body {
     }
 }
 
-/* Statistics Grid Styles */
+/* Statistics Grid Styles - Displays statistics in a grid layout */
 .statistics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    padding-bottom: 90px;
 }
 
 .stat-card {
@@ -342,7 +403,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Responsive Design for New Sections */
+/* Responsive Design for New Sections - Adjust styles for different screen sizes */
 @media screen and (max-width: 768px) {
     .intro-grid {
         grid-template-columns: 1fr;
@@ -363,14 +424,12 @@ body {
 
 /* Style for the news grid container */
 .news-grid {
-    /* Create a 2x2 grid layout */
+    /* Create a 3-column grid layout */
     display: grid;
-    /* Create two equal columns */
-    grid-template-columns: repeat(2, 1fr);
+    /* Create three equal columns */
+    grid-template-columns: repeat(3, 1fr);  /* Changed from 2 to 3 columns */
     /* Add gap between grid items */
-    gap: 20px;
-    /* Add padding around the grid */
-    padding: 20px;
+    gap: 50px;
 }
 
 /* Style for individual news items */
@@ -409,6 +468,20 @@ body {
     color: #444;
     /* Add line height for better readability */
     line-height: 1.4;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--palestine-green);
+    color: var(--palestine-white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background: var(--palestine-red);
 }
 
 /* Make the grid responsive for mobile devices */

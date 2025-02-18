@@ -57,7 +57,18 @@
             link: 'word/ipsc_unresolutions_factsheet.doc'
         }
     ];
-    
+    // Wait for the DOM to fully load before running the script
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the button and the navigation links
+    var menuBtn = document.getElementById("menuBtn");
+    var navLinks = document.getElementById("navLinks");
+
+    // Add a click event listener to the button
+    menuBtn.addEventListener("click", function() {
+        // Toggle the 'active' class on the navigation links
+        navLinks.classList.toggle("active");
+    });
+});
     // Cache DOM elements for better performance
     const searchInput = document.getElementById('searchInput');
     const filterButtons = document.querySelectorAll('.filter-btn');

@@ -1,192 +1,218 @@
-        .news-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+/* Container for the entire news section */
+.news-container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 2rem; /* Add padding inside the container */
+}
 
-        .news-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
+/* Styles for the filter buttons section */
+.news-filters {
+    display: flex; /* Use flexbox for layout */
+    gap: 1rem; /* Space between filter buttons */
+    margin-bottom: 2rem; /* Space below the filters */
+    flex-wrap: wrap; /* Allow filters to wrap to the next line */
+}
 
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            background: var(--palestine-green);
-            color: var(--palestine-white);
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+/* Individual filter button styles */
+.filter-btn {
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    background: var(--palestine-green); /* Button background color */
+    color: var(--palestine-white); /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
 
-        .filter-btn:hover {
-            background: var(--palestine-red);
-        }
+/* Hover effect for filter buttons */
+.filter-btn:hover {
+    background: var(--palestine-red); /* Change background color on hover */
+}
 
-        .filter-btn.active {
-            background: var(--palestine-red);
-        }
+/* Active state for filter buttons */
+.filter-btn.active {
+    background: var(--palestine-red); /* Background color for active button */
+}
 
-        .featured-article {
-            background: var(--palestine-white);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-        }
+/* Styles for the featured article section */
+.featured-article {
+    background: var(--palestine-white); /* Background color */
+    border-radius: 8px; /* Round the corners */
+    overflow: hidden; /* Hide overflow content */
+    margin-bottom: 2rem; /* Space below the article */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for depth */
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1.5fr 1fr; /* Define column sizes */
+}
 
+/* Content area within the featured article */
+.featured-content {
+    padding: 2rem; /* Padding inside the content area */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+}
 
+/* Grid layout for news articles */
+.news-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between articles */
+}
 
-        .featured-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+/* Individual news card styles */
+.news-card {
+    background: var(--palestine-white); /* Background color */
+    border-radius: 8px; /* Round the corners */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    display: none; /* Initially hidden */
+}
 
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+/* Visible state for news cards */
+.news-card.visible {
+    display: block; /* Show the card */
+}
 
-        .news-card {
-            background: var(--palestine-white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            display: none;
-        }
+/* Hover effect for news cards */
+.news-card:hover {
+    transform: translateY(-5px); /* Move card up on hover */
+}
 
-        .news-card.visible {
-            display: block;
-        }
+/* Styles for news images */
+.news-image {
+    width: 100%; /* Full width */
+    height: 340px; /* Fixed height */
+    object-fit: cover; /* Cover the area without distortion */
+}
 
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
+/* Content area within news cards */
+.news-content {
+    padding: 1.5rem; /* Padding inside the content area */
+}
 
-        .news-image {
-            width: 100%;
-            height: 340px;
-            object-fit: cover;
-        }
+/* Styles for news type labels */
+.news-type {
+    display: inline-block; /* Display as inline block */
+    padding: 0.25rem 0.75rem; /* Padding inside the label */
+    border-radius: 15px; /* Round the corners */
+    font-size: 0.8rem; /* Font size */
+    margin-bottom: 1rem; /* Space below the label */
+    color: var(--palestine-white); /* Text color */
+    background: rgb(0, 174, 255); /* Background color */
+}
 
-        .news-content {
-            padding: 1.5rem;
-        }
+/* Specific styles for article type */
+.type-article {
+    background: var(--palestine-green); /* Background color for articles */
+}
 
-        .news-type {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            color: var(--palestine-white);
-        }
+/* Specific styles for event type */
+.type-event {
+    background: #2196F3; /* Background color for events */
+}
 
-        .type-article {
-            background: var(--palestine-green);
-        }
+/* Specific styles for press type */
+.type-press {
+    background: var(--palestine-red); /* Background color for press */
+}
 
-        .type-event {
-            background: #2196F3;
-        }
+/* Styles for news titles */
+.news-title {
+    font-size: 1.2rem; /* Font size */
+    margin-bottom: 0.5rem; /* Space below the title */
+    color: var(--palestine-black); /* Text color */
+}
 
-        .type-press {
-            background: var(--palestine-red);
-        }
+/* Styles for news dates */
+.news-date {
+    color: #666; /* Text color */
+    font-size: 0.9rem; /* Font size */
+    margin-bottom: 1rem; /* Space below the date */
+}
 
-        .news-title {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--palestine-black);
-        }
+/* Styles for news excerpts */
+.news-excerpt {
+    color: #444; /* Text color */
+    margin-bottom: 1rem; /* Space below the excerpt */
+    line-height: 1.5; /* Line height for readability */
+}
 
-        .news-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
+/* Styles for read more links */
+.read-more {
+    display: inline-block; /* Display as inline block */
+    padding: 0.5rem 1rem; /* Padding inside the link */
+    background: var(--palestine-green); /* Background color */
+    color: var(--palestine-white); /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Round the corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
 
-        .news-excerpt {
-            color: #444;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
+/* Hover effect for read more links */
+.read-more:hover {
+    background: var(--palestine-red); /* Change background color on hover */
+}
 
-        .read-more {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--palestine-green);
-            color: var(--palestine-white);
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
+/* Styles for the search bar */
+.search-bar {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width */
+    margin-bottom: 2rem; /* Space below the search bar */
+    padding: 0.75rem; /* Padding inside the search bar */
+    border: 2px solid var(--palestine-green); /* Border color */
+    border-radius: 4px; /* Round the corners */
+    font-size: 1rem; /* Font size */
+}
 
-        .read-more:hover {
-            background: var(--palestine-red);
-        }
+/* Styles for the newsletter signup section */
+.newsletter-signup {
+    background: var(--palestine-green); /* Background color */
+    color: var(--palestine-white); /* Text color */
+    padding: 2rem; /* Padding inside the section */
+    border-radius: 8px; /* Round the corners */
+    margin-top: 3rem; /* Space above the section */
+    text-align: center; /* Center the text */
+}
 
-        .search-bar {
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 2rem;
-            padding: 0.75rem;
-            border: 2px solid var(--palestine-green);
-            border-radius: 4px;
-            font-size: 1rem;
-        }
+/* Styles for the newsletter form */
+.newsletter-form {
+    display: flex; /* Use flexbox for layout */
+    gap: 1rem; /* Space between form elements */
+    max-width: 500px; /* Maximum width */
+    margin: 1rem auto 0; /* Center the form */
+}
 
-        .newsletter-signup {
-            background: var(--palestine-green);
-            color: var(--palestine-white);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 3rem;
-            text-align: center;
-        }
+/* Styles for the newsletter input field */
+.newsletter-input {
+    flex: 1; /* Allow input to grow */
+    padding: 0.75rem; /* Padding inside the input */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Round the corners */
+    font-size: 1rem; /* Font size */
+}
 
-        .newsletter-form {
-            display: flex;
-            gap: 1rem;
-            max-width: 500px;
-            margin: 1rem auto 0;
-        }
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .featured-article {
+        grid-template-columns: 1fr; /* Change to single column layout */
+    }
 
-        .newsletter-input {
-            flex: 1;
-            padding: 0.75rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
+    .featured-image {
+        min-height: 250px; /* Minimum height for images */
+    }
 
-        @media screen and (max-width: 768px) {
-            .featured-article {
-                grid-template-columns: 1fr;
-            }
+    .news-filters {
+        justify-content: center; /* Center the filters */
+    }
 
-            .featured-image {
-                min-height: 250px;
-            }
+    .newsletter-form {
+        flex-direction: column; /* Stack form elements vertically */
+    }
 
-            .news-filters {
-                justify-content: center;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .search-bar {
-                max-width: 100%;
-            }
-        }
+    .search-bar {
+        max-width: 100%; /* Full width for search bar */
+    }
+}
  

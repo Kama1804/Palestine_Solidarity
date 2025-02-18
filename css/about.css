@@ -1,181 +1,199 @@
 /* About Page Specific Styles */
 
-/* Hero Section */
+/* Hero Section - Main visual area for the about page */
 .about-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://static.vecteezy.com/system/resources/previews/032/997/499/large_2x/crowd-protest-for-palestine-freedom-ai-generated-free-photo.jpg');;
-    background-size: cover;
-    background-position: center;
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--palestine-white);
-    margin-top: 50px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://static.vecteezy.com/system/resources/previews/032/997/499/large_2x/crowd-protest-for-palestine-freedom-ai-generated-free-photo.jpg'); /* Background image with gradient overlay */
+    background-size: cover; /* Ensure background image covers the entire area */
+    background-position: center; /* Center the background image */
+    height: 95vh; /* Set height to 95% of the viewport height */
+    display: flex; /* Use flexbox for centering content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    color: var(--palestine-white); /* Set text color to white */
+    margin-top: 50px; /* Add margin at the top */
 }
 
+/* Styles for the hero section heading */
 .about-hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 3rem; /* Set font size for the main heading */
+    margin-bottom: 1rem; /* Add space below the heading */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add shadow to text for better readability */
 }
 
-/* Mission Section */
+/* Mission Section - Displays the mission statement */
 .mission-section {
-    padding: 4rem 2rem;
-    background-color: var(--palestine-white);
+    padding: 4rem 2rem; /* Add padding around the section */
+    background-color: var(--palestine-white); /* Set background color to white */
 }
 
+/* Container for mission content */
 .mission-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
+/* Styles for mission text */
 .mission-text {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-size: 1.2rem;
+    text-align: center; /* Center the text */
+    max-width: 800px; /* Maximum width of the text */
+    margin: 0 auto 3rem; /* Center the text and add space below */
+    font-size: 1.2rem; /* Set font size */
 }
 
+/* Styles for mission values */
 .mission-values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between values */
+    margin-top: 2rem; /* Space above the values */
 }
 
+/* Styles for individual value cards */
 .value-card {
-    background-color: var(--palestine-white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    border-top: 4px solid var(--palestine-green);
+    background-color: var(--palestine-white); /* Set background color to white */
+    padding: 2rem; /* Add padding inside the card */
+    border-radius: 8px; /* Round the corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for depth */
+    text-align: center; /* Center the text */
+    border-top: 4px solid var(--palestine-green); /* Add green border on top */
 }
 
+/* Styles for value card headings */
 .value-card h3 {
-    color: var(--palestine-green);
-    margin-bottom: 1rem;
+    color: var(--palestine-green); /* Set heading color to green */
+    margin-bottom: 1rem; /* Add space below the heading */
 }
 
-/* Timeline Section */
+/* Timeline Section - Displays a timeline of events */
 .timeline-section {
-    padding: 4rem 2rem;
-    background-color: #f5f5f5;
+    padding: 4rem 2rem; /* Add padding around the section */
+    background-color: #f5f5f5; /* Set background color */
 }
 
+/* Container for the timeline */
 .timeline {
-    max-width: 800px;
-    margin: 2rem auto;
-    position: relative;
+    max-width: 800px; /* Maximum width of the timeline */
+    margin: 2rem auto; /* Center the timeline and add space above */
+    position: relative; /* Position relative for absolute children */
 }
 
+/* Vertical line in the timeline */
 .timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background-color: var(--palestine-green);
+    content: ''; /* Empty content for the line */
+    position: absolute; /* Position absolutely */
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Adjust position to center */
+    width: 4px; /* Line width */
+    height: 100%; /* Full height */
+    background-color: var(--palestine-green); /* Line color */
 }
 
+/* Styles for individual timeline items */
 .timeline-item {
-    margin: 2rem 0;
-    position: relative;
-    width: 50%;
-    padding: 0 2rem;
+    margin: 2rem 0; /* Space above and below each item */
+    position: relative; /* Position relative for absolute children */
+    width: 50%; /* Half width */
+    padding: 0 2rem; /* Padding on the sides */
 }
 
+/* Year label for timeline items */
 .timeline-item::before {
-    content: attr(data-year);
-    position: absolute;
-    top: 0;
-    right: -6.5rem;
-    background-color: var(--palestine-red);
-    color: var(--palestine-white);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    content: attr(data-year); /* Display the year from data attribute */
+    position: absolute; /* Position absolutely */
+    top: 0; /* Align to the top */
+    right: -6.5rem; /* Position to the right */
+    background-color: var(--palestine-red); /* Background color */
+    color: var(--palestine-white); /* Text color */
+    padding: 0.5rem 1rem; /* Padding inside the label */
+    border-radius: 20px; /* Round the corners */
 }
 
+/* Styles for even timeline items */
 .timeline-item:nth-child(even) {
-    margin-left: 50%;
+    margin-left: 50%; /* Move to the right */
 }
 
+/* Adjust year label for even timeline items */
 .timeline-item:nth-child(even)::before {
-    right: auto;
-    left: -6.5rem;
+    right: auto; /* Remove right positioning */
+    left: -6.5rem; /* Position to the left */
 }
 
-/* Team Section */
+/* Team Section - Displays team members */
 .team-section {
-    padding: 4rem 2rem;
-    background-color: var(--palestine-white);
+    padding: 4rem 2rem; /* Add padding around the section */
+    background-color: var(--palestine-white); /* Set background color to white */
 }
 
+/* Grid layout for team members */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between team members */
+    max-width: 1200px; /* Maximum width */
+    margin: 2rem auto; /* Center the grid and add space above */
 }
 
+/* Styles for individual team members */
 .team-member {
-    text-align: center;
+    text-align: center; /* Center the text */
 }
 
+/* Styles for team member images */
 .team-member img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 4px solid var(--palestine-green);
+    width: 200px; /* Image width */
+    height: 200px; /* Image height */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 1rem; /* Space below the image */
+    border: 4px solid var(--palestine-green); /* Green border around the image */
 }
 
+/* Styles for team member names */
 .team-member h3 {
-    color: var(--palestine-black);
-    margin-bottom: 0.5rem;
+    color: var(--palestine-black); /* Set name color to black */
+    margin-bottom: 0.5rem; /* Space below the name */
 }
 
+/* Styles for team member roles */
 .team-member p {
-    color: var(--palestine-green);
+    color: var(--palestine-green); /* Set role color to green */
 }
 
-/* Responsive Design */
+/* Responsive Design - Adjust styles for smaller screens */
 @media screen and (max-width: 768px) {
     .about-hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Adjust font size for hero heading */
     }
 
     .timeline::before {
-        left: 0;
+        left: 0; /* Align the line to the left */
     }
 
     .timeline-item {
-        width: 100%;
-        margin-left: 0 !important;
-        padding-left: 2rem;
+        width: 100%; /* Full width for timeline items */
+        margin-left: 0 !important; /* Remove left margin */
+        padding-left: 2rem; /* Add padding on the left */
     }
 
     .timeline-item::before {
-        left: -3.5rem !important;
-        right: auto !important;
+        left: -3.5rem !important; /* Adjust position of year label */
+        right: auto !important; /* Remove right positioning */
     }
 
     .mission-values {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout */
     }
 }
 
+/* Further adjustments for very small screens */
 @media screen and (max-width: 480px) {
     .about-hero-content h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Further adjust font size for hero heading */
     }
 
     .team-member img {
-        width: 150px;
-        height: 150px;
+        width: 150px; /* Reduce image width */
+        height: 150px; /* Reduce image height */
     }
 }
