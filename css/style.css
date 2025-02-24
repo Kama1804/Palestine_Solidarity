@@ -380,6 +380,7 @@ body {
     color: var(--palestine-white);
     padding: 4rem 2rem;
     text-align: center;
+    margin: -33px;
 }
 
 .cta-buttons {
