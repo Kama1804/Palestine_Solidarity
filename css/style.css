@@ -473,10 +473,10 @@ body {
 .read-more {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--palestine-green);
+    background: orange;
     color: var(--palestine-white);
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 100px;
     transition: background-color 0.3s;
 }
 
